@@ -1,0 +1,33 @@
+﻿
+<div id="Eingabe" style="padding:10px;">
+    <div style="padding:5px;">
+        <div id="WebCam">
+            <video id="YwebcamYobjectY" width="320" height="240" autoplay></video>
+        </div>
+        <div id="FlashCam">
+            <object id="XwebcamXobjectX" type="application/x-shockwave-flash"
+                    data="~/js/Fallback/jscam_canvas_only.swf" width="320" height="240">
+                <param name="FlashVars" value="mode=callback&amp;quality=95" />
+                <param name="allowScriptAccess" value="always" />
+            </object>
+        </div>
+    </div>
+    <div id="SnapshotButton" style="padding:5px;">
+        <button class="btn btn-primary btn-large" id="takeSnapshot">Machen Sie ein Bild</button><br />
+    </div>
+    <div class="span1" id="Bild" style="padding:5px;">
+        <canvas id="Preview" width="320" height="240"></canvas>
+    </div>
+    <div id="SnapshotButton" style="padding:5px;">
+        <button class="btn btn-primary btn-large" id="analyzeFace" disabled>Bild analysieren</button>
+    </div>
+    <div id="Rueckgabe" style="padding:5px;">
+        <p id="responseMessage"></p>
+    </div>
+    <div>&nbsp;</div>
+</div>
+
+<script type="text/javascript" src="~/js/getUserMedia.js"></script>
+<script type="text/javascript" src="~/js/Webcam.js"></script>
+
+

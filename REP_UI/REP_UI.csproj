@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Product>Recognizing Emotions Program</Product>
+    <Version>1.0.1</Version>
+    <Authors>Joachim Stein</Authors>
+    <Company>-</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\JS\**" />
+    <Compile Remove="Views\Old\**" />
+    <Content Remove="Views\JS\**" />
+    <Content Remove="Views\Old\**" />
+    <EmbeddedResource Remove="Views\JS\**" />
+    <EmbeddedResource Remove="Views\Old\**" />
+    <None Remove="Views\JS\**" />
+    <None Remove="Views\Old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\bootstrap-responsive.min.css" />
+    <Content Remove="wwwroot\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\css\demo.css" />
+    <Content Remove="wwwroot\js\Fallback\jscam_canvas_only.swf" />
+    <Content Remove="wwwroot\js\getUserMedia.js" />
+    <Content Remove="wwwroot\js\Webcam.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\Test.html" />
+    <None Remove="Views\htmlpage.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\Fallback\jscam_canvas_only.swf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\getUserMedia.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="wwwroot\js\Webcam.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
